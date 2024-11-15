@@ -1,0 +1,19 @@
+{
+  "src": [
+    "pages/Index",
+    "pages/RefreshUpAndDownPage",
+    "pages/ListUpAndDownPage",
+    "pages/GridUpAndDownPage",
+    "pages/WaterFlowUpAndDownPage",
+    "pages/RefreshHeaderAndFooterPage",
+    "pages/LayoutHeaderPage",
+    "pages/AutoRefreshPage",
+    "pages/NoScrollSpringPage",
+    "pages/FooterNothingPage",
+    "pages/LoadDataSpringBackPage",
+    "pages/FixedFooterPage",
+    "pages/RefreshPointPage",
+    "pages/RefreshScrollPage",
+    "pages/LazyDataOperationPage"
+  ]
+}
