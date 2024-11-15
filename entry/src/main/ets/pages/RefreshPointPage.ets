@@ -1,4 +1,4 @@
-import { LitheRefresh, RefreshController, RefreshHeaderType } from '@abner/lithe-refresh'
+import { LitheRefresh, RefreshController, RefreshHeaderType } from '@abner/lithe_refresh'
 import { ActionBar } from '@abner/bar'
 import router from '@ohos.router'
 

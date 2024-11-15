@@ -1,6 +1,6 @@
 import { ActionBar } from '@abner/bar';
 import router from '@ohos.router';
-import { LitheRefresh, RefreshController } from '@abner/lithe-refresh';
+import { LitheRefresh, RefreshController } from '@abner/lithe_refresh';
 
 /**
  * AUTHOR:AbnerMing

@@ -20,10 +20,10 @@ HarmonyOsLitheRefresh是一个轻盈的上拉下拉刷新组件，无任何耦�
 
 ### 刷新效果
 <p align="center">
-<img src="https://vipandroid-image.oss-cn-beijing.aliyuncs.com/harmony/refresh/refresh_243_02.jpeg" width="200px" />
-<img src="https://vipandroid-image.oss-cn-beijing.aliyuncs.com/harmony/refresh/refresh_243_03.jpeg" width="200px" />
-<img src="https://vipandroid-image.oss-cn-beijing.aliyuncs.com/harmony/refresh/refresh_243_04.jpeg" width="200px" />
-<img src="https://vipandroid-image.oss-cn-beijing.aliyuncs.com/harmony/refresh/refresh_243_05.jpeg" width="200px" />
+<img src="https://vipandroid-image.oss-cn-beijing.aliyuncs.com/harmony/refresh/lithe_100.png" width="200px" />
+<img src="https://vipandroid-image.oss-cn-beijing.aliyuncs.com/harmony/refresh/lithe_101.png" width="200px" />
+<img src="https://vipandroid-image.oss-cn-beijing.aliyuncs.com/harmony/refresh/lithe_102.png" width="200px" />
+<img src="https://vipandroid-image.oss-cn-beijing.aliyuncs.com/harmony/refresh/lithe_103.png" width="200px" />
 </p>
 
 ## 开发环境
@@ -41,13 +41,13 @@ modelVersion：5.0.0
 **建议：在使用的模块路径下进行执行命令。**
 
 ```
-ohpm install @abner/lithe-refresh
+ohpm install @abner/lithe_refresh
 ```
 
 方式二：在工程的oh-package.json5中设置三方包依赖，配置示例如下：
 
 ```
-"dependencies": { "@abner/lithe-refresh": "^1.0.0"}
+"dependencies": { "@abner/lithe_refresh": "^1.0.0"}
 ```
 
 <p align="center"><img src="https://vipandroid-image.oss-cn-beijing.aliyuncs.com/harmony/refresh/lithe_001.png" width="300"></p>

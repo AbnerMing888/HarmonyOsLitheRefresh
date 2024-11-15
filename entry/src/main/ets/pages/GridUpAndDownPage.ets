@@ -1,4 +1,4 @@
-import { LitheRefresh, RefreshController } from '@abner/lithe-refresh'
+import { LitheRefresh, RefreshController } from '@abner/lithe_refresh'
 import { ActionBar } from '@abner/bar'
 import router from '@ohos.router'
 
@@ -48,7 +48,6 @@ struct GridUpAndDownPage {
 
       ActionBar({
         title: "Grid组件刷新",
-        barBackgroundColor: Color.Red,
         leftText: "返回",
         onLeftClick: () => {
           router.back()
