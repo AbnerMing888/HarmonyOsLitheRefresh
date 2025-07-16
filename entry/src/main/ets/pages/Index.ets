@@ -13,14 +13,14 @@ import router from '@ohos.router'
 struct Index {
   private mGridData: string[] = ["任意组件刷新", "List组件刷新", "Grid组件刷新",
     "WaterFlow组件刷新", "自定义刷新头尾", "自动下拉刷新",
-    "无阻尼效果", "加载数据不回弹", "显示暂无数据", "固定暂无数据", "刷新不禁止拖动", "三个点刷新头",
-    "懒加载封装使用"]
+    "无阻尼效果","最大阻尼效果", "加载数据不回弹", "显示暂无数据", "固定暂无数据", "刷新不禁止拖动", "三个点刷新头",
+    "懒加载封装使用","Web组件使用"]
   private mRouterData: string[] = [
     "pages/RefreshUpAndDownPage", "pages/ListUpAndDownPage", "pages/GridUpAndDownPage",
     "pages/WaterFlowUpAndDownPage", "pages/RefreshHeaderAndFooterPage",
-    "pages/AutoRefreshPage", "pages/NoScrollSpringPage", "pages/LoadDataSpringBackPage",
+    "pages/AutoRefreshPage", "pages/NoScrollSpringPage", "pages/ListMaxSpringPage", "pages/LoadDataSpringBackPage",
     "pages/FooterNothingPage", "pages/FixedFooterPage", "pages/RefreshScrollPage",
-    "pages/RefreshPointPage", "pages/LazyDataOperationPage"
+    "pages/RefreshPointPage", "pages/LazyDataOperationPage", "pages/WebViewPage"
   ]
 
   build() {

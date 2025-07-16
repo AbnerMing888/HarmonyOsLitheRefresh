@@ -7,7 +7,7 @@
   "license": "",
   "dependencies": {
     "@abner/bar": "^1.0.0",
-    "@abner/lithe_refresh": "file:./libs/litheRefresh-1.0.0.har"
+    "@abner/lithe_refresh": "file:./libs/litheRefresh-signed-1.0.3.har"
   }
 }
 

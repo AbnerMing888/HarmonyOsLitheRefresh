@@ -1,12 +1,11 @@
 ## 介绍
 
-**刷新组件已上架元服务**
-
-鸿蒙应用商店，搜索：**刷新组件**，即可到达元服务页面，本身带有效果和代码，奈何审核非常严格，只能把效果去掉，不过大家可以一键复制代码，还是非常的方便的,希望大家多多支持！
-
+<p align="center">
+<img src="https://vipandroid-image.oss-cn-beijing.aliyuncs.com/harmony/abner.jpg" width="100px" /><br/>
+<span style="font-size:12px;color:red;">扫码关注，千帆起航，共筑鸿蒙！</span>
+</p>
 
 HarmonyOsLitheRefresh是一个轻盈的上拉下拉刷新组件，无任何耦合，支持List、Grid，WaterFlow，支持各种任意组件刷新!
-
 
 ### 特点
 
@@ -21,7 +20,7 @@ HarmonyOsLitheRefresh是一个轻盈的上拉下拉刷新组件，无任何耦�
 ### 所有功能
 
 <p align="center">
-<img src="https://vipandroid-image.oss-cn-beijing.aliyuncs.com/harmony/refresh/lithe.png" width="300px" />
+<img src="https://vipandroid-image.oss-cn-beijing.aliyuncs.com/harmony/refresh/lithe715.png" width="300px" />
 </p>
 
 ### 刷新效果
@@ -34,9 +33,9 @@ HarmonyOsLitheRefresh是一个轻盈的上拉下拉刷新组件，无任何耦�
 
 ## 开发环境
 
-DevEco Studio NEXT Developer Beta1,Build Version: 5.0.3.900
+DevEco Studio NEXT Developer Beta1,Build Version: 5.0.11.100
 
-Api版本：**12**
+Api版本：**>=12**
 
 modelVersion：5.0.0
 
@@ -53,7 +52,7 @@ ohpm install @abner/lithe_refresh
 方式二：在工程的oh-package.json5中设置三方包依赖，配置示例如下：
 
 ```
-"dependencies": { "@abner/lithe_refresh": "^1.0.0"}
+"dependencies": { "@abner/lithe_refresh": "^1.0.3"}
 ```
 
 <p align="center"><img src="https://vipandroid-image.oss-cn-beijing.aliyuncs.com/harmony/refresh/lithe_001.png" width="300"></p>
