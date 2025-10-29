@@ -20,7 +20,7 @@ HarmonyOsLitheRefresh是一个轻盈的上拉下拉刷新组件，无任何耦�
 ### 所有功能
 
 <p align="center">
-<img src="https://vipandroid-image.oss-cn-beijing.aliyuncs.com/harmony/refresh/lithe715.png" width="300px" />
+<img src="https://vipandroid-image.oss-cn-beijing.aliyuncs.com/harmony/refresh/lithe_refresh_20251029001.png" width="300px" />
 </p>
 
 ### 刷新效果
@@ -33,7 +33,7 @@ HarmonyOsLitheRefresh是一个轻盈的上拉下拉刷新组件，无任何耦�
 
 ## 开发环境
 
-DevEco Studio NEXT Developer Beta1,Build Version: 5.0.11.100
+DevEco Studio NEXT Developer Beta1,Build Version: 6.0.0.868
 
 Api版本：**>=12**
 
@@ -52,7 +52,7 @@ ohpm install @abner/lithe_refresh
 方式二：在工程的oh-package.json5中设置三方包依赖，配置示例如下：
 
 ```
-"dependencies": { "@abner/lithe_refresh": "^1.0.3"}
+"dependencies": { "@abner/lithe_refresh": "^1.0.4"}
 ```
 
 <p align="center"><img src="https://vipandroid-image.oss-cn-beijing.aliyuncs.com/harmony/refresh/lithe_001.png" width="300"></p>
@@ -66,7 +66,7 @@ ohpm install @abner/lithe_refresh
 
 ## 代码使用
 
-您可以使用LitheRefresh组件，包裹您想刷新的任意组件，相对比较灵活，如果您想实现懒加载数据模式，建议结合提供的**RefreshDataSource**，可以让您实现更加方便。
+您可以使用LitheRefresh组件或者RefreshView组件，包裹您想刷新的任意组件，相对比较灵活，如果您想实现懒加载数据模式，建议结合提供的**RefreshDataSource**，可以让您实现更加方便。
 
 **须知**：如果是包裹的可滑动组件，比如List，Grid，WaterFlow等，需要配合nestedScroll属性！
 

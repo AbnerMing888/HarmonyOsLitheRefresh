@@ -44,7 +44,7 @@ struct NoScrollSpringPage {
     Column() {
 
       ActionBar({
-        title: "List组件刷新",
+        title: "【无阻尼刷新】",
         leftText: "返回",
         onLeftClick: () => {
           router.back()

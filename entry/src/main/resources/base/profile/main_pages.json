@@ -1,6 +1,7 @@
 {
   "src": [
     "pages/Index",
+    "pages/RefreshIndex",
     "pages/RefreshUpAndDownPage",
     "pages/ListUpAndDownPage",
     "pages/GridUpAndDownPage",
@@ -15,7 +16,30 @@
     "pages/RefreshPointPage",
     "pages/RefreshScrollPage",
     "pages/LazyDataOperationPage",
+    "pages/ListMaxSpringPage",
+    "pages/RefreshImmersivePage",
     "pages/WebViewPage",
-    "pages/ListMaxSpringPage"
+    "pages/AdaptiveHeightPage",
+    "pages/MultiViewPage",
+    "pages/AutoListUpAndDownPage",
+    "pages/refresh/NewRefreshUpAndDownPage",
+    "pages/refresh/NewListUpAndDownPage",
+    "pages/refresh/NewGridUpAndDownPage",
+    "pages/refresh/NewWaterFlowUpAndDownPage",
+    "pages/refresh/NewRefreshHeaderAndFooterPage",
+    "pages/refresh/NewAutoRefreshPage",
+    "pages/refresh/NewNoScrollSpringPage",
+    "pages/refresh/NewMaxScrollSpringPage",
+    "pages/refresh/NewLoadDataSpringBackPage",
+    "pages/refresh/NewFooterNothingPage",
+    "pages/refresh/NewFixedFooterPage",
+    "pages/refresh/NewRefreshScrollPage",
+    "pages/refresh/NewRefreshPointPage",
+    "pages/refresh/NewLazyDataOperationPage",
+    "pages/refresh/NewRefreshImmersivePage",
+    "pages/refresh/NewWebViewPage",
+    "pages/refresh/NewAdaptiveHeightPage",
+    "pages/refresh/NewMultiViewPage",
+    "pages/refresh/NewAutoListUpAndDownPage"
   ]
 }

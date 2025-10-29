@@ -1,7 +1,19 @@
 {
   "app": {
     "signingConfigs": [
-
+      {
+        "name": "default",
+        "type": "HarmonyOS",
+        "material": {
+          "certpath": "C:\\Users\\GW00261583\\.ohos\\config\\default_HarmonyOsLitheRefresh_eK1fapZHEPSd8CfL1tsF12DaZckSnIVMzgNELu4Vr-I=.cer",
+          "keyAlias": "debugKey",
+          "keyPassword": "0000001B5B2F29CBD680F754F34AE0B77642180ACF1FE15E91D4ED9DB4A30D0D92A49D1BE9ECC794490FD6",
+          "profile": "C:\\Users\\GW00261583\\.ohos\\config\\default_HarmonyOsLitheRefresh_eK1fapZHEPSd8CfL1tsF12DaZckSnIVMzgNELu4Vr-I=.p7b",
+          "signAlg": "SHA256withECDSA",
+          "storeFile": "C:\\Users\\GW00261583\\.ohos\\config\\default_HarmonyOsLitheRefresh_eK1fapZHEPSd8CfL1tsF12DaZckSnIVMzgNELu4Vr-I=.p12",
+          "storePassword": "0000001BFCA0B6581351C009CF9DA905D35027D7D30CE0DABFC0334482DE461C81E80C960B68DE268AEE7E"
+        }
+      }
     ],
     "products": [
       {
@@ -37,6 +49,10 @@
           ]
         }
       ]
+    },
+    {
+      "name": "litheRefresh",
+      "srcPath": "./litheRefresh",
     }
   ]
 }

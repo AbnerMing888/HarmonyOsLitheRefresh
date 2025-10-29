@@ -15,9 +15,9 @@ struct ListUpAndDownPage {
   controller: RefreshController = new RefreshController()
 
   @Builder
-  itemLayout(_this: ListUpAndDownPage) {
-    List({ scroller: _this.scroller, space: 20 }) {
-      ForEach(_this.testArray, (item: number) => {
+  itemLayout() {
+    List({ scroller: this.scroller, space: 20 }) {
+      ForEach(this.testArray, (item: number) => {
         ListItem() {
           Text('' + item)
             .width('100%')
@@ -43,19 +43,12 @@ struct ListUpAndDownPage {
   build() {
     Column() {
 
-      ActionBar({
-        title: "List组件刷新",
-        leftText: "返回",
-        onLeftClick: () => {
-          router.back()
-        },
-      })
 
       LitheRefresh({
         scroller: this.scroller,
         controller: this.controller,
         itemLayout: () => {
-          this.itemLayout(this)
+          this.itemLayout()
         },
         onRefresh: () => {
           //下拉刷新
