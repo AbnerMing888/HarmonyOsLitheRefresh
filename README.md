@@ -5,7 +5,7 @@
 <span style="font-size:12px;color:red;">扫码关注，千帆起航，共筑鸿蒙！</span>
 </p>
 
-HarmonyOsLitheRefresh是一个轻盈的上拉下拉刷新组件，无任何耦合，支持List、Grid，WaterFlow，支持各种任意组件刷新!
+lithe_refresh是一个轻盈的上拉下拉刷新组件，无任何耦合，支持List、Grid，WaterFlow，支持各种任意组件刷新!
 
 ### 特点
 
@@ -15,6 +15,17 @@ HarmonyOsLitheRefresh是一个轻盈的上拉下拉刷新组件，无任何耦�
 
 如果您想实现一些较为复杂的效果，比如拖拽，侧滑删除，二楼，吸顶等等效果，您可以使用我的另一个全能刷新组件refresh,地址：[点击直达](https://ohpm.openharmony.cn/#/cn/detail/@abner%2Frefresh)
 
+### 目前支持功能
+
+- 1、支持List、Grid，WaterFlow，支持各种任意组件下来刷新。
+- 2、支持List、Grid，WaterFlow，支持各种任意组件上拉加载。
+- 3、支持web组件下拉刷新和上拉加载。
+- 4、支持自定义下拉刷新和上拉加载样式。
+- 5、支持上拉加载无数据和无数据固定等样式展示。
+- 6、支持无阻尼，有阻尼，最大阻尼条件设置。
+- 7、支持自动下拉刷新，自动上拉加载等功能触发。
+- 8、支持多视图，自定义高度。
+- 
 ## 效果
 
 ### 所有功能
@@ -31,13 +42,9 @@ HarmonyOsLitheRefresh是一个轻盈的上拉下拉刷新组件，无任何耦�
 <img src="https://vipandroid-image.oss-cn-beijing.aliyuncs.com/harmony/refresh/lithe_103.png" width="200px" />
 </p>
 
-## 开发环境
+## Api支持版本
 
-DevEco Studio NEXT Developer Beta1,Build Version: 6.0.0.868
-
-Api版本：**>=12**
-
-modelVersion：5.0.0
+Api版本：>=12
 
 ## 快速使用
 
@@ -52,7 +59,7 @@ ohpm install @abner/lithe_refresh
 方式二：在工程的oh-package.json5中设置三方包依赖，配置示例如下：
 
 ```
-"dependencies": { "@abner/lithe_refresh": "^1.0.4"}
+"dependencies": { "@abner/lithe_refresh": "^1.0.5"}
 ```
 
 <p align="center"><img src="https://vipandroid-image.oss-cn-beijing.aliyuncs.com/harmony/refresh/lithe_001.png" width="300"></p>
@@ -66,7 +73,10 @@ ohpm install @abner/lithe_refresh
 
 ## 代码使用
 
-您可以使用LitheRefresh组件或者RefreshView组件，包裹您想刷新的任意组件，相对比较灵活，如果您想实现懒加载数据模式，建议结合提供的**RefreshDataSource**，可以让您实现更加方便。
+目前提供了两个自定义组件，一个是LitheRefresh组件，一个是RefreshView组件，两个都可以实现下拉和上拉功能，RefreshView组件是在系统Refresh组件基础
+之上封装的，看大家的需求进行对应选择使用。
+
+只需要包裹您想刷新的任意组件，相对比较灵活，如果您想实现懒加载数据模式，建议结合提供的**RefreshDataSource**，可以让您实现更加方便。
 
 **须知**：如果是包裹的可滑动组件，比如List，Grid，WaterFlow等，需要配合nestedScroll属性！
 
@@ -482,7 +492,7 @@ export class WaterFlowDataSource implements IDataSource {
 ## License
 
 ```
-Copyright (C) AbnerMing, HarmonyOsLitheRefresh Open Source Project
+Copyright (C) AbnerMing, lithe_refresh Open Source Project
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
