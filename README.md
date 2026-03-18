@@ -25,7 +25,7 @@ lithe_refresh是一个轻盈的上拉下拉刷新组件，无任何耦合，支�
 - 6、支持无阻尼，有阻尼，最大阻尼条件设置。
 - 7、支持自动下拉刷新，自动上拉加载等功能触发。
 - 8、支持多视图，自定义高度。
-- 
+
 ## 效果
 
 ### 所有功能
@@ -59,7 +59,7 @@ ohpm install @abner/lithe_refresh
 方式二：在工程的oh-package.json5中设置三方包依赖，配置示例如下：
 
 ```
-"dependencies": { "@abner/lithe_refresh": "^1.0.5"}
+"dependencies": { "@abner/lithe_refresh": "^1.0.6"}
 ```
 
 <p align="center"><img src="https://vipandroid-image.oss-cn-beijing.aliyuncs.com/harmony/refresh/lithe_001.png" width="300"></p>
@@ -482,6 +482,141 @@ export class WaterFlowDataSource implements IDataSource {
   }
 }
 ```
+
+### 属性介绍
+
+#### LitheRefresh
+
+| 属性                       | 类型                                          | 概述                          |
+|--------------------------|---------------------------------------------|-----------------------------|
+| itemLayout               | () => void                                  | 子布局，可以是任意布局,List/Grid/Other |
+| headerRefreshLayout      | (status: RefreshLayoutStatusModel) => void  | 头部下拉布局……                    |
+| footerLoadLayout         | (status: LoadMoreLayoutStatusModel) => void | 尾部加载布局……                    |
+| onRefresh                | () => void                                  | 下拉刷新                        |
+| onLoadMore               | () => void                                  | 上拉加载                        |
+| enableRefresh            | boolean                                     | 是否禁止刷新                      |
+| enableLoadMore           | boolean                                     | 是否禁止上拉加载                    |
+| refreshHeaderAttribute   | (attribute: RefreshHeaderAttr) => void      | 刷新头属性设置                     |
+| loadMoreFooterAttribute  | (attribute: LoadMoreFooterAttr) => void     | 加载尾部属性                      |
+| scroller                 | Scroller                                    | 外部可滑动组件必传递                  |
+| controller               | RefreshController                           | 刷新控制器                       |
+| isScrollSpring           | boolean                                     | 是否是阻尼效果，默认是阻尼效果             |
+| maxRefreshSpringDistance | number                                      | 最大刷新阻尼距离                    |
+| maxLoadSpringDistance    | number                                      | 最大加载阻尼距离                    |
+| isPullUpProhibitTouch    | boolean                                     | 加载是否禁止手势，默认禁止               |
+| isPullDownProhibitTouch  | boolean                                     | 刷新是否禁止手势，默认禁止               |
+| slideDisplayLoadData     | boolean                                     | 滑动显示加载数据                    |
+| isScrollBottom           | boolean                                     | 是否滑动了底部                     |
+
+#### RefreshView
+
+| 属性                       | 类型                                          | 概述                          |
+|--------------------------|---------------------------------------------|-----------------------------|
+| itemLayout               | () => void                                  | 子布局，可以是任意布局,List/Grid/Other |
+| headerRefreshLayout      | (status: RefreshLayoutStatusModel) => void  | 头部下拉布局……                    |
+| footerLoadLayout         | (status: LoadMoreLayoutStatusModel) => void | 尾部加载布局……                    |
+| onRefresh                | () => void                                  | 下拉刷新                        |
+| onLoadMore               | () => void                                  | 上拉加载                        |
+| enableRefresh            | boolean                                     | 是否禁止刷新                      |
+| enableLoadMore           | boolean                                     | 是否禁止上拉加载                    |
+| refreshHeaderAttribute   | (attribute: RefreshHeaderAttr) => void      | 刷新头属性设置                     |
+| loadMoreFooterAttribute  | (attribute: LoadMoreFooterAttr) => void     | 加载尾部属性                      |
+| controller               | RefreshController                           | 刷新控制器                       |
+| isScrollSpring           | boolean                                     | 是否是阻尼效果，默认是阻尼效果             |
+| maxRefreshSpringDistance | number                                      | 最大刷新阻尼距离                    |
+| maxLoadSpringDistance    | number                                      | 最大加载阻尼距离                    |
+| isPullUpProhibitTouch    | boolean                                     | 加载是否禁止手势，默认禁止               |
+| isPullDownProhibitTouch  | boolean                                     | 刷新是否禁止手势，默认禁止               |
+| slideDisplayLoadData     | boolean                                     | 滑动显示加载数据                    |
+
+### 全局初始化
+
+全局初始化，可以动态配置下拉刷新和上拉加载的内容展示，配置后，全局生效，也可以单独进行配置。
+
+```typescript
+initRefreshOptions({
+      refreshHeaderAttr: (attr) => {
+        attr.pullingText = "下拉刷新"
+        attr.releaseText = "释放加载"
+        //……其他属性
+      },
+      loadMoreFooterAttr:(attr)=>{
+        attr.footerPullingText = "上拉加载中"
+        //……其他属性
+      }
+    })
+```
+
+#### 相关属性
+
+RefreshHeaderAttr属性：
+
+| 属性              | 类型                                         | 概述                           |
+|-----------------|--------------------------------------------|------------------------------|
+| headerType      | RefreshHeaderType                          | 刷新头类型，目前只有DEFAULT和POINTS三点刷新 |
+| width           | Length                                     | 刷新头的宽度                       |
+| height          | number                                     | 刷新头的高度                       |
+| timeFormat      | RefreshHeaderTimeFormat                    | 刷新头的时间格式,默认月日时分              |
+| timeLabel       | RefreshHeaderTimeLabel                     | 刷新头的时间标签格式                   |
+| hideTime        | boolean                                    | 是否隐藏刷新头时间，默认展示               |
+| fontSize        | number/string/ Resource                    | 刷新头的文字大小                     |
+| fontColor       | ResourceColor                              | 刷新头的文字颜色                     |
+| timeFontSize    | number /string/Resource                    | 刷新头的时间文字大小                   |
+| timeFontColor   | ResourceColor                              | 刷新头的时间文字颜色                   |
+| marginIconLeft  | Length                                     | 刷新文字距离左边的距离                  |
+| iconDown        | PixelMap/ ResourceStr/DrawableDescriptor   | 刷新的下拉箭头                      |
+| iconUpLoad      | PixelMap / ResourceStr/ DrawableDescriptor | 下拉刷新icon                     |
+| pullingText     | string / Resource                          | 下拉可以刷新的文字内容                  |
+| releaseText     | string /Resource                           | 释放立即刷新的文字内容                  |
+| refreshingText  | string/Resource                            | 正在刷新中的文字内容                   |
+| finishText      | string/Resource                            | 刷新结束的文字内容                    |
+| backgroundColor | ResourceColor                              | 背景颜色                         |
+| marginBottom    | Length                                     | 距离底部                         |
+| iconWidth       | Length                                     | 图片宽度                         |
+| iconHeight      | Length                                     | 图片高度                         |
+
+LoadMoreFooterAttr属性：
+
+| 属性                  | 类型                                        | 概述          |
+|---------------------|-------------------------------------------|-------------|
+| width               | Length                                    | 加载尾的宽度      |
+| height              | Length                                    | 加载尾的高度      |
+| backgroundColor     | ResourceColor                             | 尾部背景颜色      |
+| footerPullingText   | string/Resource                           | 上拉加载文字内容    |
+| footerReleaseText   | string/Resource                           | 释放加载文字内容    |
+| footerLoadingText   | string/Resource                           | 加载中蚊子内容     |
+| footerFinishText    | string/Resource                           | 加载结束文字内容    |
+| footerNothingText   | string/Resource                           | 暂时没有数据文字内容  |
+| fontColor           | ResourceColor                             | 字体颜色        |
+| fontSize            | number /string / Resource                 | 字体大小        |
+| fontWeight          | number /FontWeight/ string                | 字重          |
+| fontFamily          | string/Resource                           | 字体          |
+| loadingSrc          | PixelMap/ ResourceStr/ DrawableDescriptor | loading图片地址 |
+| loadingIconWidth    | Length                                    | 加载图片宽度      |
+| loadingIconHeight   | Length                                    | 加载图片高度      |
+| loadingMarginRight  | Length                                    | 距离右边文字的距离   |
+
+RefreshHeaderTimeFormat类型：
+
+```typescript
+  YMDHMS, //年月日时分秒 2024-04-08 08:08:08
+  MDHMS, //月日时分秒 04-08 08:08:08
+  MDHM, //月日时分秒 04-08 08:08
+  HMS //时分秒 08:08:08
+```
+
+RefreshHeaderTimeLabel类型：
+
+```typescript
+BACKSLASH, //反斜杠 / 2024/04/08 08:08:08
+SHORTLINE, //短线 -  2024-04-08 08:08:08
+CHARACTERS //文字 年月日 2024年04月08日 08时08分08秒
+```
+
+
+## 更多案例
+
+可以查看相关Demo【右侧仓库地址】。
 
 ## 咨询作者
 
